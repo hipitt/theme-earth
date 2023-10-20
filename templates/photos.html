@@ -31,11 +31,13 @@
         class="columns-1 gap-3 pb-12 sm:columns-2 sm:gap-3 md:columns-3 lg:columns-4 [&>div:not(:first-child)]:mt-3"
       >
         <div th:each="photo : ${photos.items}" class="group relative h-auto max-w-full">
-          <img
-            class="animated fadeIn transform-gpu rounded-lg transition-all"
-            th:src="${photo.spec.url}"
-            th:alt="${photo.spec.displayName}"
-          />
+          <a target="_blank" th:href="${photo.spec.url}" th:title="${photo.spec.displayName}">
+            <img
+                class="animated fadeIn transform-gpu rounded-lg transition-all"
+                th:src="${photo.spec.url}"
+                th:alt="${photo.spec.displayName}"
+            />
+          </a>
         </div>
       </div>
 
