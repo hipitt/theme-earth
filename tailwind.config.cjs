@@ -9,6 +9,9 @@ module.exports = {
         7: "7",
         8: "8",
       },
+      aspectRatio: {
+        '20': '20',
+      },
     },
     container: {
       padding: {
