@@ -5,7 +5,7 @@
 >
   <div
     th:if="${cover} and ${not #strings.isEmpty(post.spec.cover)}"
-    class="aspect-w-16 aspect-h-20"
+    class="aspect-w-9 aspect-h-16"
     th:classappend="${direction == 'column' ? 'col-span-2' : ''}"
   >
     <a th:href="@{${post.status.permalink}}" th:title="${post.spec.title}">
