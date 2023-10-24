@@ -27,7 +27,7 @@
           @click.outside="shareModal = false"
           class="relative my-4 transform overflow-hidden rounded-lg bg-white p-4 text-left shadow-xl transition-all sm:w-full sm:max-w-xl"
         >
-          <h1 class="text-lg font-semibold">分享</h1>
+          <h1 class="text-lg font-semibold">Share</h1>
           <div class="my-8">
             <div class="grid grid-cols-5 gap-6 sm:grid-cols-6">
               <template x-for="item in activeShareItems">
@@ -50,7 +50,7 @@
                 <div
                   class="cursor-pointer select-none text-sm text-gray-600 hover:text-gray-900"
                   @click="handleCopy"
-                  x-text="copied ? '已复制':'复制'"
+                  x-text="copied ? 'Replicated':'Copy'"
                 ></div>
               </div>
             </div>

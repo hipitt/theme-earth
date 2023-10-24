@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html
   xmlns:th="https://www.thymeleaf.org"
-  th:replace="~{modules/layout :: html(title = '分类：' + ${category.spec.displayName} + ' - ' + ${site.title}, hero = null, content = ~{::content}, head = null, footer = null, sidebar = null, contentClass = null)}"
+  th:replace="~{modules/layout :: html(title = 'Category：' + ${category.spec.displayName} + ' - ' + ${site.title}, hero = null, content = ~{::content}, head = null, footer = null, sidebar = null, contentClass = null)}"
 >
   <th:block th:fragment="content">
     <th:block th:replace="~{modules/category-filter}" />
@@ -21,7 +21,7 @@
     </div>
 
     <div th:if="${posts.total == 0}" class="mt-6 flex items-center justify-center">
-      <span class="text-sm font-light text-gray-600 dark:text-slate-200">此分类下没有文章</span>
+      <span class="text-sm font-light text-gray-600 dark:text-slate-200">There are no articles in this category</span>
     </div>
 
     <div class="mt-6 flex items-center justify-between" th:if="${posts.hasPrevious() || posts.hasNext()}">
@@ -30,14 +30,14 @@
         class="whitespace-no-wrap group inline-flex items-center justify-center gap-1 rounded-md border border-gray-200 bg-white px-4 py-1 text-sm font-medium leading-6 text-gray-600 shadow-sm hover:bg-gray-50 focus:shadow-none focus:outline-none dark:border-slate-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white"
       >
         <span class="i-tabler-arrow-left text-lg transition-all group-hover:-translate-x-1"></span>
-        <span>上一页</span>
+        <span>Prev</span>
       </a>
       <span class="text-sm text-gray-900 dark:text-slate-50" th:text="|${posts.page} / ${posts.totalPages}|"></span>
       <a
         th:href="@{${posts.nextUrl}}"
         class="whitespace-no-wrap group inline-flex items-center justify-center gap-1 rounded-md border border-gray-200 bg-white px-4 py-1 text-sm font-medium leading-6 text-gray-600 shadow-sm hover:bg-gray-50 focus:shadow-none focus:outline-none dark:border-slate-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white"
       >
-        <span>下一页</span>
+        <span>Next</span>
         <span class="i-tabler-arrow-right text-lg transition-all group-hover:translate-x-1"></span>
       </a>
     </div>

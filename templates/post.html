@@ -47,9 +47,9 @@
               th:text="${post.owner.displayName}"
             ></a>
             <div class="flex items-center gap-2 text-xs font-light text-gray-600 dark:text-slate-100">
-              <span th:text="|发布于 ${#dates.format(post.spec.publishTime,'yyyy-MM-dd')}|"></span>
+              <span th:text="|Publish ${#dates.format(post.spec.publishTime,'yyyy-MM-dd')}|"></span>
               <span class="text-gray-300 dark:text-slate-200">/</span>
-              <span th:text="|${post.stats?.visit ?:0} 阅读|"></span>
+              <span th:text="|${post.stats?.visit ?:0} Read|"></span>
             </div>
           </div>
         </div>
@@ -149,7 +149,7 @@
       </div>
       <hr th:if="${haloCommentEnabled}" class="my-10 dark:border-slate-700" />
       <div id="comment" th:if="${haloCommentEnabled}">
-        <h2 class="mb-2 text-base font-medium text-gray-900 dark:text-slate-50">评论</h2>
+        <h2 class="mb-2 text-base font-medium text-gray-900 dark:text-slate-50">Comment</h2>
         <halo:comment
           group="content.halo.run"
           kind="Post"
